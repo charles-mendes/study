@@ -1,7 +1,9 @@
 <template>
     <v-app-bar
-        color="primary"
-        prominent
+      flat
+      color="primary"
+      prominent
+      class="border-b"
     >
         <v-app-bar-nav-icon 
           variant="text" 
@@ -13,9 +15,7 @@
 
         <v-spacer></v-spacer>
 
-        <v-menu
-        open-on-hover
-        >
+        <v-menu open-on-hover>
         <template v-slot:activator="{ props }">
             <v-btn
             variant="text"
@@ -36,6 +36,12 @@
         </v-menu>
     </v-app-bar>
 </template>
+
+<style scoped>
+  .v-toolbar__content > ::after{
+    height: 48px !important;
+  }
+</style>
 
 <script setup lang="ts">
   import { ref } from 'vue'
