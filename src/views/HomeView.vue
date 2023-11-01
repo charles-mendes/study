@@ -2,9 +2,7 @@
   <AppHeader/>
   <AppNavigation/>
 
-  <!-- <v-row class="d-flex flex-column align-center justify-center" style="min-height: 300px;"> -->
-
-    <p class="text-h5 mb-6 mt-6">Convidados</p>
+    <p style="color:#333333" class="text-h5 mb-6 mt-6">Convidados</p>
 
     <v-data-table
       v-model:items-per-page="itemsPerPage"
@@ -14,7 +12,6 @@
       class="elevation-1"
       style="width: 100%;"
     ></v-data-table>
-  <!-- </v-row> -->
 </template>
 
 <script setup lang="ts">

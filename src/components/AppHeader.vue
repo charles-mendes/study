@@ -1,7 +1,7 @@
 <template>
     <v-app-bar
       flat
-      color="primary"
+      color="#00984b"
       prominent
       class="border-b"
     >
