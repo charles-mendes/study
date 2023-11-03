@@ -2,7 +2,7 @@
     <v-navigation-drawer
         v-model="controller.drawer"
         location="left"
-        permanent
+        temporary
     >
         <v-list>
             <v-list-item 

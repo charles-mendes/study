@@ -1,9 +1,7 @@
 <template>
     <v-app-bar
-      flat
       color="#00984b"
       prominent
-      class="border-b"
     >
         <v-app-bar-nav-icon 
           variant="text" 
