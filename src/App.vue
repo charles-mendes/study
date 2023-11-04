@@ -28,4 +28,9 @@
     width: 100%;
     max-width: 100%;
   }
+
+  html, body{
+    font-family: "Nunito Sans", sans-serif;
+  }
+
 </style>
