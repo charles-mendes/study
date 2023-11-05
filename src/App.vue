@@ -9,6 +9,11 @@
               <RouterView />    
             </v-card-text>
           </v-main>
+          <v-footer class="pa-0">
+            <div class="px-4 py-2 text-center w-100" color="grey-darken-3">
+              <p class="text-subtitle-1">{{ new Date().getFullYear() }}</p>
+            </div>
+          </v-footer>
       </v-app>
     </v-layout>
   </v-card>
@@ -27,6 +32,10 @@
     margin: 0px;
     width: 100%;
     max-width: 100%;
+  }
+
+  .v-main{
+    height: 95%;
   }
 
   html, body{
