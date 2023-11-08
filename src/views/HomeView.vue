@@ -12,17 +12,19 @@
       item-value="id"
       class="elevation-1"
       show-select
+      itemsPerPageText="Itens por página"
+      :items-per-page-options="rows_per_page"
     >
       <template v-slot:top>
         <!-- style="background-color: black;" -->
-        <v-row align="center" justify="center" class="pb-2">
-          <v-sheet class="ma-2 pa-2">
-            <v-btn class="mt-3" color="red-darken-1" flat :ripple="false" block rounded="xl" size="small" append-icon="mdi-trash-can">
+        <div class="d-flex pb-2" align="center" justify="center">
+          <v-sheet class=" d-flex pa-2" justify="center">
+            <v-btn class="ma-2 pa-2 align-self-end" style="justify-content: center;" color="red-darken-1" flat :ripple="false" block rounded="xl" size="small" append-icon="mdi-trash-can">
               Inativar Selecionados
             </v-btn>
           </v-sheet>
-          <v-sheet class="ma-2 pa-2">
-            <v-btn class="mt-3" color="primary" flat :ripple="false" block rounded="xl" size="small" append-icon="mdi-plus">
+          <v-sheet class="ma-2 pa-2 align-self-end">
+            <v-btn class="" color="primary" flat :ripple="false" block rounded="xl" size="small" append-icon="mdi-plus">
               Adicionar Convidado
             </v-btn>
           </v-sheet>
@@ -46,7 +48,7 @@
               hide-details
             ></v-text-field>
           </v-sheet>
-        </v-row>
+        </div>
       </template>
       
       <template v-slot:item.acoes="{ item }">
@@ -63,7 +65,10 @@
           </v-sheet>
         </div>
       </template>
-    </v-data-table> 
+
+      
+
+    </v-data-table>
   </v-container>
 </template>
 
@@ -101,6 +106,13 @@
 <script setup lang="ts">
   import { ref } from 'vue'
 
+  const rows_per_page = ref([
+    {value: 10, title: '10'},
+    {value: 25, title: '25'},
+    {value: 50, title: '50'},
+    {value: 100, title: '100'}
+  ]);
+
   const itemsPerPage = ref(10);
   const headers = ref([
     { title: 'Nome', align: 'start', sortable: false, key: 'nome', width: '50%'},
@@ -130,6 +142,23 @@
 
   const selected = ref([])
 
-  const editar = () => (console.log('editar'))
-  const excluir = () => (console.log('editar'))
+  function editar(){
+    console.log('editar')
+  }
+  function excluir(){
+    console.log('editar')
+  }
+  function previousPage(options){
+    // Handle previous page action
+    if (options.page > 1) {
+      options.page--;
+    }
+  }
+
+  function nextPage(options) {
+    // Handle next page action
+    if (options.page * options.itemsPerPage < options.itemsLength) {
+      options.page++;
+    }
+  }
 </script>
