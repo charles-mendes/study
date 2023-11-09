@@ -12,9 +12,10 @@
       item-value="id"
       class="elevation-1"
       show-select
-      itemsPerPageText="Itens por página"
       :items-per-page-options="rows_per_page"
     >
+      <!-- itemsPerPageText="Itens por página" -->
+
       <template v-slot:top>
         <!-- style="background-color: black;" -->
         <div class="d-flex pb-2" align="center" justify="center">
@@ -65,8 +66,6 @@
           </v-sheet>
         </div>
       </template>
-
-      
 
     </v-data-table>
   </v-container>

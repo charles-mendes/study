@@ -10,6 +10,7 @@
                 :key="item.value"
                 color="#0072bb"
                 :title="item.title"
+                :to="item.route"
             >
             </v-list-item>
         </v-list>
@@ -24,16 +25,18 @@
 
   const items = ref([
       {
-          title: 'Eventos',
-          value: 'evento',
+        title: 'Eventos',
+        value: 'evento',
+        route: 'evento'
       },
       {
-          title: 'Convidados',
-          value: 'convidado',
+        title: 'Convidados',
+        value: 'convidado',
       },
       {
-          title: 'Relatórios',
-          value: 'relatorios',
+        title: 'Relatórios',
+        value: 'relatorios',
+        route: 'relatorio'
       },
   ]); 
 </script>

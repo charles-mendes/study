@@ -13,11 +13,18 @@ import {
   VDataTableVirtual,
 } from "vuetify/labs/VDataTable";
 
+import { pt, en } from 'vuetify/locale';
+
 // Composables
 import { createVuetify } from 'vuetify'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
+  locale: {
+    locale: 'pt',
+    fallback: 'en', // Use 'en' as the fallback locale
+    messages: { pt, en},
+  },
   components: {
     VDataTable,
     VDataTableServer,

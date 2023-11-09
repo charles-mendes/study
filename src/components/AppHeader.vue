@@ -13,7 +13,11 @@
         </v-app-bar-nav-icon>
 
         <v-app-bar-title>
-          <p class="text-h5 font-weight-medium">CASA CIVIL</p> 
+          <router-link :to="'/'" class="my-custom-link">
+            <p class="text-h5 font-weight-medium">
+              CASA CIVIL
+            </p> 
+          </router-link>
         </v-app-bar-title>
 
         <!-- <v-img src="../../public/images/casa_civil_tres.png" height="60" width="60"></v-img> -->
@@ -42,7 +46,10 @@
 </template>
 
 <style>
-  
+  .my-custom-link {
+    text-decoration: none; /* Remove underline */
+    color: rgb(255, 255, 255);
+  }
   .v-img__img, .v-img__picture, .v-img__gradient, .v-img__placeholder, .v-img__error{
     max-width: 128px !important;
     margin-left: 35px !important;
