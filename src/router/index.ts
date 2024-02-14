@@ -4,19 +4,9 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: () => import('../views/HomeView.vue'),
-    },
-    {
-      path: '/evento',
-      name: 'evento',
-      component: () => import('../views/EventoView.vue'),
-    },
-    {
-      path: '/relatorio',
-      name: 'relatorio',
-      component: () => import('../views/RelatorioView.vue'),
+      path: '/desafio-um',
+      name: 'desafio-um',
+      component: () => import('../views/DesafioUm.vue'),
     }
   ]
 })
