@@ -1,1 +1,5 @@
-@import './base.css';
+:root {
+    --blue-custom: #0072bb;
+    --white: #ffffff;
+    --green-custom: #00984b;
+}

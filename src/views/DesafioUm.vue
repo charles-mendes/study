@@ -6,7 +6,7 @@
                 <span class="color-end-title detals-title">lândia</span>
             </div>
             <div>
-                <input class="input-style" type="text" name="input-search" id="input-search">
+                <input placeholder="Pesquisar no blog" class="input-style input-style-icon" type="text" name="input-search" id="input-search">
             </div>
         </nav>
     </div>
@@ -15,7 +15,7 @@
   <script setup lang="ts">
     
   </script>
-  <style>
+  <style lang="scss">
     .body-style {
         background-color: #17171A;
         width: 100%;
@@ -27,10 +27,26 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
+        height: 291px;
     }
     .input-style {
+        height: 64px;
+        width: 1216px;
+        padding: 16px, 24px, 16px, 24px;
+        border-radius: 8px;
+        border: 2px solid #252529;
+        gap: 16px;
+        background-color: #202024;
+        color: #FFFFFF;
+    }
+    .input-style-icon{
+        padding-left: 45px;
+        background: url("svg/icon-search.svg") no-repeat left;
+        background-position: 8px;
+    }
+    input:focus{
+        border-radius: 8px;
         border: 2px solid #ffffff;
-        width: 800px;
     }
     .detals-title {
         font-family: Space Grotesk;

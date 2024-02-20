@@ -5,6 +5,6 @@
 <script setup lang="ts">
   
 </script>
-<style>
-  
+<style lang="scss">
+  @import 'styles/reset.scss';
 </style>
